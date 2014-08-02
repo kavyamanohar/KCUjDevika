@@ -1,50 +1,28 @@
 \usepackage{fontspec}
 \usepackage{polyglossia}
-\usepackage{pbox}	%for paragraph boxes
 \usepackage{xcolor} 
-%\definecolor{lightgray}{HTML}{EEEEEE}%background colour for boxes
 \setdefaultlanguage{malayalam}
 \setmainfont[Script=Malayalam,HyphenChar="0000]{Rachana}
 \lefthyphenmin=1
 \righthyphenmin=2
 \linespread{1.1}
 \graphicspath{{./images/}}
-\usepackage{float}
 
+\usepackage{float}
 \usepackage{newfloat}
+
 \usepackage{caption}
-\DeclareFloatingEnvironment[fileext=frm,placement={},name=]{myfloat}
-\captionsetup[myfloat]{labelfont=bf}
+
+%\captionsetup[myfloat]{labelfont=bf}
+
 \usepackage[framemethod=TikZ]{mdframed}
-\usepackage{multicol}
+
+%\usepackage{multicol}
+
 \usepackage[colorlinks=true]{hyperref}
 
 \usepackage[breakable]{tcolorbox} % load with breakable library
 \DeclareFloatingEnvironment[name={}]{mybox}
-
-\newenvironment{frameenv}[1]
-    {
-    	\begin{myfloat}[tb]
-    	\begin{mdframed}[roundcorner=10pt,backgroundcolor=blue!10]
-    	\caption{#1}
-    
-    }
-    {\end{mdframed}\end{myfloat}
-    }
-
-\newenvironment{frameenv2}[1]
-    {\begin{myfloat}[tb]
-    \begin{mdframed}[roundcorner=10pt,backgroundcolor=blue!10]
-    \caption{#1}
-    \begin{multicols*}{2}
-    }
-    {\end{multicols*}\end{mdframed}\end{myfloat}
-    }
-    
-    
-
-
-
 
 %%%%%%%%%%%
 
